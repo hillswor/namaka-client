@@ -14,7 +14,7 @@ export default function AppContextProvider({ children }) {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    fetch("/api/check-session", {
+    fetch("https://namaka-server.onrender.com/check-session", {
       method: "GET",
     })
       .then((res) => {
@@ -28,7 +28,7 @@ export default function AppContextProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    fetch("/api/posts", {
+    fetch("https://namaka-server.onrender.com/posts", {
       method: "GET",
     })
       .then((res) => {

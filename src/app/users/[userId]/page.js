@@ -26,7 +26,7 @@ export default function UserPage() {
   }
 
   function handleDelete(aquarium) {
-    fetch(`/api/aquariums/${aquarium.id}`, {
+    fetch(`https://namaka-server.onrender.com/aquariums/${aquarium.id}`, {
       method: "DELETE",
     }).then((res) => {
       if (res.status === 200) {
