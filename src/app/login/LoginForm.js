@@ -31,7 +31,7 @@ export default function LoginForm() {
     },
     validationSchema: LoginSchema,
     onSubmit: (values) => {
-      fetch("/api/login", {
+      fetch("https://namaka-server.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
