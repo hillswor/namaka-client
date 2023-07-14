@@ -53,7 +53,7 @@ export default function Navbar() {
         <li className={liStyle}>
           <Link href="/posts">Message Board</Link>
         </li>
-        <li onClick={handleLogout} className={liStyle}>
+        <li onClick={handleLogout} className={`${liStyle} cursor-pointer`}>
           Logout
         </li>
       </ul>
