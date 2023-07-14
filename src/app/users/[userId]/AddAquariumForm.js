@@ -30,7 +30,7 @@ export default function AddAquariumForm({ toggleAddForm }) {
     validationSchema: AquariumSchema,
     onSubmit: (values) => {
       values.owner_id = user.id;
-      fetch("/api/aquariums", {
+      fetch("https://namaka-server.onrender.com/aquariums", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

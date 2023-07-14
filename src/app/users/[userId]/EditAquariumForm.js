@@ -29,7 +29,7 @@ export default function EditAquariumForm({ toggleEditForm, aquarium }) {
     },
     validationSchema: AquariumSchema,
     onSubmit: (values) => {
-      fetch(`/api/aquariums/${aquarium.id}`, {
+      fetch(`https://namaka-server.onrender.com/aquariums/${aquarium.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
