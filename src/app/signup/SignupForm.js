@@ -105,7 +105,7 @@ export default function SignupForm() {
     validationSchema: SignupSchema,
     validateOnChange: true,
     onSubmit: (values) => {
-      fetch("/api/users", {
+      fetch("https://namaka-server.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

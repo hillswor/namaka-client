@@ -34,7 +34,7 @@ export default function CommentForm({ toggleCommentForm }) {
     onSubmit: (values) => {
       values.user_id = user.id;
       values.post_id = post.id;
-      fetch("/api/comments", {
+      fetch("https://namaka-server.onrender.com/comments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
