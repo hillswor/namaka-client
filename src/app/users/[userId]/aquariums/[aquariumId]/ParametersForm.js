@@ -8,9 +8,6 @@ import { AquariumContext } from "../../../../AppContext";
 export default function ParametersForm({ toggleParameterForm }) {
   const { aquarium, setAquarium } = useContext(AquariumContext);
 
-  const buttonStyling =
-    "bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 transition-all duration-200";
-
   const parametersSchema = yup.object().shape({
     salinity: yup
       .number()
@@ -108,17 +105,24 @@ export default function ParametersForm({ toggleParameterForm }) {
     },
   });
 
+  const containerStyles =
+    "flex flex-col bg-slate-600 rounded-md max-w-xl mx-6 p-8 mt-16 mb-16 shadow-2xl sm:mx-auto md:mx-auto";
+  const labelStyles = "text-white text-lg mb-2";
+  const inputStyles =
+    "bg-white text-slate-600 rounded-lg px-4 py-2 mb-2 w-full";
+  const errorStyles = "text-red-400 mb-2 rounded text-xs";
+  const buttonStyles =
+    "bg-red-500 hover:bg-red-600 transition duration-200 ease-in-out text-white font-bold py-2 px-4 rounded";
+
   return (
-    <section
-      className={
-        "flex flex-col items-center justify-center border-4 border-blue-500 bg-gray-800 text-white rounded-lg max-w-xl mx-auto p-8 mt-10 sm:mt-16"
-      }
-    >
-      <button onClick={toggleParameterForm} className={buttonStyling}>
-        Back
-      </button>
+    <section className={containerStyles}>
+      <div className="text-center">
+        <button onClick={toggleParameterForm} className={buttonStyles}>
+          Back
+        </button>
+      </div>
       <form onSubmit={handleSubmit} className={"w-full"}>
-        <label htmlFor="salinity" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="salinity" className={labelStyles}>
           Salinity (d SG)
         </label>
         <input
@@ -129,18 +133,14 @@ export default function ParametersForm({ toggleParameterForm }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="Safe Range 1.025 - 1.027"
-          className={
-            "number-input border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.salinity && errors.salinity ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>
-            {errors.salinity}
-          </p>
+          <p className={errorStyles}>{errors.salinity}</p>
         ) : (
           <div className="h-6"></div>
         )}
-        <label htmlFor="ph" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="ph" className={labelStyles}>
           pH
         </label>
         <input
@@ -151,16 +151,14 @@ export default function ParametersForm({ toggleParameterForm }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="Safe Range 7.8 - 8.5"
-          className={
-            "number-input border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.ph && errors.ph ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>{errors.ph}</p>
+          <p className={errorStyles}>{errors.ph}</p>
         ) : (
           <div className="h-6"></div>
         )}
-        <label htmlFor="ammonia" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="ammonia" className={labelStyles}>
           Ammonia (ppm)
         </label>
         <input
@@ -171,18 +169,14 @@ export default function ParametersForm({ toggleParameterForm }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="Safe Range 0 - 0.1 ppm"
-          className={
-            "number-input border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.ammonia && errors.ammonia ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>
-            {errors.ammonia}
-          </p>
+          <p className={errorStyles}>{errors.ammonia}</p>
         ) : (
           <div className="h-6"></div>
         )}
-        <label htmlFor="nitrate" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="nitrate" className={labelStyles}>
           Nitrate (ppm)
         </label>
         <input
@@ -193,18 +187,14 @@ export default function ParametersForm({ toggleParameterForm }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="Safe Range 0 - 5 ppm"
-          className={
-            "number-input border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.nitrate && errors.nitrate ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>
-            {errors.nitrate}
-          </p>
+          <p className={errorStyles}>{errors.nitrate}</p>
         ) : (
           <div className="h-6"></div>
         )}
-        <label htmlFor="phosphate" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="phosphate" className={labelStyles}>
           Phosphate (ppm)
         </label>
         <input
@@ -215,18 +205,14 @@ export default function ParametersForm({ toggleParameterForm }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="Safe Range 0 - 0.03 ppm"
-          className={
-            "number-input border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.phosphate && errors.phosphate ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>
-            {errors.phosphate}
-          </p>
+          <p className={errorStyles}>{errors.phosphate}</p>
         ) : (
           <div className="h-6"></div>
         )}
-        <label htmlFor="calcium" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="calcium" className={labelStyles}>
           Calcium (ppm)
         </label>
         <input
@@ -237,18 +223,14 @@ export default function ParametersForm({ toggleParameterForm }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="Safe Range 375 - 450 ppm"
-          className={
-            "number-input border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.calcium && errors.calcium ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>
-            {errors.calcium}
-          </p>
+          <p className={errorStyles}>{errors.calcium}</p>
         ) : (
           <div className="h-6"></div>
         )}
-        <label htmlFor="magnesium" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="magnesium" className={labelStyles}>
           Magnesium (ppm)
         </label>
         <input
@@ -259,18 +241,14 @@ export default function ParametersForm({ toggleParameterForm }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="Safe Range 1250 - 1350 ppm"
-          className={
-            "number-input border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.magnesium && errors.magnesium ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>
-            {errors.magnesium}
-          </p>
+          <p className={errorStyles}>{errors.magnesium}</p>
         ) : (
           <div className="h-6"></div>
         )}
-        <label htmlFor="alkalinity" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="alkalinity" className={labelStyles}>
           Alkalinity (dKH)
         </label>
         <input
@@ -281,24 +259,15 @@ export default function ParametersForm({ toggleParameterForm }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="Safe Range 7 - 11 dKH"
-          className={
-            "number-input border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.alkalinity && errors.alkalinity ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>
-            {errors.alkalinity}
-          </p>
+          <p className={errorStyles}>{errors.alkalinity}</p>
         ) : (
           <div className="h-6"></div>
         )}
         <div className="flex justify-center">
-          <button
-            type="submit"
-            className={
-              "bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 transition-all duration-200 mt-4"
-            }
-          >
+          <button type="submit" className={buttonStyles}>
             Submit
           </button>
         </div>
