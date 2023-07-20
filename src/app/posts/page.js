@@ -30,14 +30,14 @@ export default function Posts() {
             <>
               <article
                 key={post.id}
-                className="bg-slate-500 rounded-md shadow-2xl p-8 mb-16"
+                className="bg-slate-600 rounded-md shadow-2xl p-8 mb-16"
               >
                 <header className="mb-4">
                   <h2 className="text-xl font-bold">{post.title}</h2>
                 </header>
                 <p className="text-m">{post.content}</p>
                 <footer className="mt-4 text-xs">
-                  <p className="text-gray-400">
+                  <p className="text-red-400">
                     Posted by {post.user.email} on{" "}
                     {new Date(post.created_at).toLocaleDateString()}
                   </p>

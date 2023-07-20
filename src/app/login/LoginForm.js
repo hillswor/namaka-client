@@ -57,8 +57,6 @@ export default function LoginForm() {
     },
   });
 
-  //Styles
-
   const labelStyles = "text-white text-lg mb-2";
   const inputStyles =
     "bg-white text-slate-600 rounded-lg px-4 py-2 mb-2 w-full";
