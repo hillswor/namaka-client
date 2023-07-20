@@ -203,8 +203,8 @@ export default function AquariumPage() {
         height={500}
         className={imgStyling}
       />
-      <h1>{aquarium.brand}</h1>
-      <p>{aquarium.model}</p>
+      <h1 className="text-white">{aquarium.brand}</h1>
+      <p className="text-white">{aquarium.model}</p>
       <div className="text-center">
         <button className={buttonStyles} onClick={toggleParameterForm}>
           Log Parameters
