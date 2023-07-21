@@ -93,9 +93,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![TailwindCSS][Tailwind]][Tailwind-url]
+ [![Next][Next.js]][Next-url]
+ [![React][React.js]][React-url]
+ [![TailwindCSS][Tailwind]][Tailwind-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -191,9 +191,9 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Bruce Hillsworth - [@twitter_handle](https://twitter.com/bhillsworth) - bruce.hillsworth@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/hillswor/namaka-client](https://github.com/hillswor/namaka-client)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
