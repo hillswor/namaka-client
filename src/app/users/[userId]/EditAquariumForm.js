@@ -50,22 +50,24 @@ export default function EditAquariumForm({ toggleEditForm, aquarium }) {
     },
   });
 
+  const containerStyles =
+    "flex flex-col bg-slate-600 rounded-md max-w-xl mx-6 p-8 mt-16 mb-16 shadow-2xl sm:mx-auto md:mx-auto";
+  const labelStyles = "text-white text-lg mb-2";
+  const inputStyles =
+    "bg-white text-slate-600 rounded-lg px-4 py-2 mb-2 w-full";
+  const errorStyles = "text-red-400 mb-2 rounded text-xs";
+  const buttonStyles =
+    "bg-red-500 hover:bg-red-600 transition duration-200 ease-in-out text-white font-bold py-2 px-4 rounded";
+
   return (
-    <section
-      className={
-        "flex flex-col items-center justify-center border-4 border-blue-500 bg-gray-800 text-white rounded-lg max-w-xl mx-auto p-8 mt-10 sm:mt-16"
-      }
-    >
-      <button
-        onClick={() => toggleEditForm()}
-        className={
-          "bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 transition-all duration-200"
-        }
-      >
-        Back
-      </button>
+    <section className={containerStyles}>
+      <div className="text-center">
+        <button onClick={() => toggleEditForm()} className={buttonStyles}>
+          Back
+        </button>
+      </div>
       <form onSubmit={handleSubmit} className={"w-full"}>
-        <label htmlFor="brand" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="brand" className={labelStyles}>
           Brand
         </label>
         <input
@@ -76,16 +78,14 @@ export default function EditAquariumForm({ toggleEditForm, aquarium }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder={`${aquarium.brand}`}
-          className={
-            "border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.brand && errors.brand ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>{errors.brand}</p>
+          <p className={errorStyles}>{errors.brand}</p>
         ) : (
           <div className="h-6"></div>
         )}
-        <label htmlFor="model" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="model" className={labelStyles}>
           Model
         </label>
         <input
@@ -96,16 +96,14 @@ export default function EditAquariumForm({ toggleEditForm, aquarium }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder={`${aquarium.model}`}
-          className={
-            "border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.model && errors.model ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>{errors.model}</p>
+          <p className={errorStyles}>{errors.model}</p>
         ) : (
           <div className="h-6"></div>
         )}
-        <label htmlFor="volume" className={"block text-white text-lg mb-2"}>
+        <label htmlFor="volume" className={labelStyles}>
           Volume (gallons)
         </label>
         <input
@@ -116,24 +114,16 @@ export default function EditAquariumForm({ toggleEditForm, aquarium }) {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder={`${aquarium.volume}`}
-          className={
-            "number-input border-2 border-blue-500 bg-gray-700 text-white rounded-lg px-4 py-2 mb-2 w-full"
-          }
+          className={inputStyles}
         />
         {touched.volume && errors.volume ? (
-          <p className={"text-red-500 mb-2 rounded text-xs"}>{errors.volume}</p>
+          <p className={errorStyles}>{errors.volume}</p>
         ) : (
           <div className="h-6"></div>
         )}
 
         <div className="flex justify-center">
-          <button
-            type="submit"
-            className={
-              "bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 transition-all duration-200 mt-4"
-            }
-            onClick={handleSubmit}
-          >
+          <button type="submit" className={buttonStyles} onClick={handleSubmit}>
             Update Aquarium
           </button>
         </div>

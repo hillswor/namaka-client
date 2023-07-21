@@ -47,7 +47,6 @@ export default function AddAquariumForm({ toggleAddForm }) {
     },
   });
 
-  //Styles
   const containerStyles =
     "flex flex-col bg-slate-600 rounded-md max-w-xl mx-6 p-8 mt-16 mb-16 shadow-2xl sm:mx-auto md:mx-auto";
   const labelStyles = "text-white text-lg mb-2";
