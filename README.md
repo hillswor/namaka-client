@@ -220,7 +220,7 @@ Project Link: [https://github.com/hillswor/namaka-client](https://github.com/hil
 [stars-url]: https://github.com/hillswor/namaka-client/stargazers
 [issues-shield]: https://img.shields.io/github/issues/hillswor/namaka-client.svg?style=for-the-badge
 [issues-url]: https://github.com/hillswor/namaka-client/issues
-[license-shield]: https://img.shields.io/github/license/hillswor/namaka-client.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/hillswor/namaka-client/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/bruce-hillsworth
