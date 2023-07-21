@@ -67,7 +67,7 @@ export default function CommentForm({ toggleCommentForm }) {
   const replyContainerStyles =
     "flex flex-col bg-slate-600 rounded-md max-w-xl mx-6 p-8 mt-16 mb-16 shadow-2xl sm:mx-auto md:mx-auto";
   const textAreaStyles =
-    "w-full px-3 py-2 mt-1 text-gray-800 bg-gray-200 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-500";
+    "w-full px-3 py-2 mt-1 text-gray-800 bg-gray-200 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-red-400";
   const errorStyles = "text-red-400 mb-2 rounded text-xs";
   const buttonStyles =
     "bg-red-500 hover:bg-red-600 transition duration-200 ease-in-out text-white font-bold py-2 px-4 rounded";

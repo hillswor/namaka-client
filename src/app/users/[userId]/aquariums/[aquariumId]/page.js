@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { Line } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 import "chartjs-adapter-date-fns";
-import "tailwindcss/tailwind.css"; // Import tailwind css
+import "tailwindcss/tailwind.css";
 
 import { AquariumContext } from "../../../../AppContext";
 import ParmatersForm from "./ParametersForm";
