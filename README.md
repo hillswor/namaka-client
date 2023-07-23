@@ -76,8 +76,6 @@ Moreover, Namaka aims to be home to a thriving community with an interactive mes
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
 First, run the development server:
@@ -98,14 +96,43 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Once logged in, users can go to the "My Account" page to edit or delete existing aquariums.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<div align="center">
+    <img src="screenshots/namaka-my-account.png" alt="Screenshot of 'My Account' page" width="400" height="300">
+</div>
+<br />
+Clicking "View" will take the user to the aquarium page where they can view a chart of all the logged water parameters for that aquarium or log new parameters.
+<br />
+<br />
+<div align="center">
+    <img src="screenshots/namaka-aquarium-page.png" alt="Screenshot of 'Aquarium' page" width="400" height="300">
+</div>
+<br />
+<div align="center">
+    <img src="screenshots/namaka-water-parameters.png" alt="Screenshot of 'Water Parameter' page" width="400" height="300">
+</div>
+<br />
+Users can also communicate with other users via the message board(The majority of current messages are from seed data via the Faker library so it is jibberish)
+<br />
+<br />
+<div align="center">
+    <img src="screenshots/namaka-message-board.png" alt="Screenshot of 'Message Board' page" width="400" height="300">
+</div>
+<br />
+<div align="center">
+    <img src="screenshots/namaka-comment-form.png" alt="Screenshot of comment form on 'Message Board'" width="400" height="300">
+</div>
+<br />
+<div align="center">
+    <img src="screenshots/namaka-comment-form.png" alt="Screenshot of comment form on 'Message Board'" width="400" height="300">
+</div>
+<br />
+<div align="center">
+    <img src="screenshots/namaka-comment-posted.png" alt="Screenshot of comment posted" width="400" height="300">
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
